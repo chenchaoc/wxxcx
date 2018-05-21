@@ -1,5 +1,15 @@
 //index.js
 //获取应用实例
+import ajax from '../../utils/ajax.js';
+import util from '../../utils/util.js';
+console.log(util.params({a:2,b:3,c: 'aaa', d: ''}))
+//ajax('123', { a: 2})
+// ajax.get('234', {b:2}, {header: {'content-type': 'application/x-www-form-urlencoded'}}).then((d) => {
+//   console.log(d)
+// }).catch((e) => {
+//   console.log(e)
+// })
+//ajax.post('345', {c:3}, {header: {'content-type': 'application/x-www-form-urlencoded'}})
 const app = getApp()
 Page({
   data: {
@@ -11,7 +21,7 @@ Page({
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '/pages/abc/abc'
     })
   },
   onLoad: function () {

@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/chenchaoc/wxxcx/issues"
   },
-  "homepage": "https://github.com/chenchaoc/wxxcx#readme"
+  "homepage": "https://github.com/chenchaoc/wxxcx#readme",
+  "dependencies": {}
 }

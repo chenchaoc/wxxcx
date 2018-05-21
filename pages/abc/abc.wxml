@@ -1,3 +1,7 @@
 <view>
-    abc
+    <view wx:for="{{list}}" wx:key="title">
+        <view>
+            {{item.title}}-{{item.date}}-{{item.name}}
+        </view>
+    </view>
 </view>

@@ -15,7 +15,7 @@
       跳转到新页面
     </navigator>
   </view>
-  <view bindtap="">
-    
+  <view bindtap="bindViewTap">
+    <text>hehehe</text>  
   </view>
 </view>
