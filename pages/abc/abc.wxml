@@ -3,5 +3,6 @@
         <view>
             {{item.title}}-{{item.date}}-{{item.name}}
         </view>
+
     </view>
 </view>

@@ -1,12 +1,13 @@
 //app.js
 App({
-  onLaunch: function () {
+  //小程序启动后触发
+  onLaunch(options) {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-    // 登录
+/*    // 登录
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
@@ -31,9 +32,26 @@ App({
           })
         }
       }
-    })
+    })*/
   },
+  //比如拿取用户信息   在子页面通过 const app = getApp()   app.globalData.userInfo
   globalData: {
     userInfo: null
+  },
+  //生命周期函数--监听小程序显示,当小程序启动，或从后台进入前台显示，会触发 onShow
+  onShow(options) {
+    //console.log(options)
+  },
+  //生命周期函数--监听小程序隐藏,当小程序从前台进入后台，会触发 onHide
+  onHide() {
+
+  },
+  //错误监听函数,当小程序发生脚本错误，或者 api 调用失败时，会触发 onError 并带上错误信息
+  onError() {
+
+  },
+  //页面不存在监听函数,当小程序出现要打开的页面不存在的情况，会带上页面信息回调该函数
+  onPageNotFound() {
+
   }
 })

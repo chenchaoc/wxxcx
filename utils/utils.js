@@ -15,13 +15,14 @@ function formatTime(date) {
 }
 /**
  * [微信接口promise化]
- * @param  {[Function]} func [description]
+ * @param  {[Function]} func [微信api]
  * @return {[Promise]}      [description]
+ * utils.promisefy(wx.getUserInfo)().then((res) => {res.userInfo})
  */
 function promisefy(func) {
   return function(obj = {}) {
     return new Promise((resolve, reject) => {
-      func(Object.assign({}, obj, { success:resolve, fail: reject}))
+      return func(Object.assign({}, obj, { success:resolve, fail: reject}))
     })
   }
 }

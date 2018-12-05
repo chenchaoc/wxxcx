@@ -2,8 +2,8 @@
 * @Author: chenchao
 * @Date: 2018-05-18 10:35:02
 * @Email: chenchao3@sh.superjia.com
-* @Last Modified by: chenchao
-* @Last Modified time: 2018-05-18 18:31:31
+ * @Last Modified by: chenchao
+ * @Last Modified time: 2018-05-25 11:41:42
 */
 
 /**
@@ -17,10 +17,11 @@
 function ajax(url, data = {}, options = {}) {
     const defaultConfig = {
         url: '', //String 开发者服务器接口地址
-        method: 'GET', //请求方式：OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        method: 'POST', //请求方式：OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
         data: {}, //请求的参数
         header: { //Object 设置请求的 header，header 中不能设置 Referer
-            'content-type': 'application/json'
+            'content-type': 'application/json', //默认值
+            'MYYCY-TOKEN': wx.getStorageSync('token') || '' //token值   首页没登录不应该有
         },
         dataType: 'json', //String如果设为json，会尝试对返回的数据做一次 JSON.parse
         success: () => {}, //Function 收到开发者服务成功返回的回调函数
@@ -36,14 +37,6 @@ function ajax(url, data = {}, options = {}) {
             ...options
         }))
     }).then((res) => res.data)
-}
-
-ajax.get = function(url, ...arg) {
-    return ajax(url, ...arg)
-}
-
-ajax.post = function(url, data, config) {
-    return ajax(url, data, Object.assign({}, { method: 'POST' }, config ))
 }
 
 export default ajax

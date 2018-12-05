@@ -1,0 +1,9 @@
+<view>
+  <button  open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">点击登录</button>
+<!--   <block wx:else>
+    <view>
+        <image src="{{userInfo.avatarUrl}}" class="userinfo-avatar" mode="cover" />
+        <text>{{userInfo.nickName}}</text>
+    </view>
+  </block> -->
+</view> 
