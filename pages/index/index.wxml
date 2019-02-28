@@ -17,4 +17,8 @@
   <view bindtap="bindDetail">
     <text>跳转到detail</text>
   </view>
+  <view bindtap="bindUpload">
+    <text>上传文档</text>
+  </view>
+  <view class="a"></view>
 </view>

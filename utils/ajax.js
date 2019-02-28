@@ -24,9 +24,9 @@ function ajax(url, data = {}, options = {}) {
             'MYYCY-TOKEN': wx.getStorageSync('token') || '' //token值   首页没登录不应该有
         },
         dataType: 'json', //String如果设为json，会尝试对返回的数据做一次 JSON.parse
-        success: () => {}, //Function 收到开发者服务成功返回的回调函数
-        fail: () => {}, //Function 接口调用失败的回调函数  
-        complete: () => {}, //Function 接口调用结束的回调函数（调用成功、失败都会执行）
+        // success: () => {}, //Function 收到开发者服务成功返回的回调函数
+        // fail: () => {}, //Function 接口调用失败的回调函数  
+        // complete: () => {}, //Function 接口调用结束的回调函数（调用成功、失败都会执行）
     }
     return new Promise((resolve, reject) => {
         wx.request(Object.assign({}, defaultConfig, {

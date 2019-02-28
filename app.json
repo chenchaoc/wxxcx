@@ -15,16 +15,20 @@
     "backgroundColorTop": "#09BB07"
   },
   "tabBar": {
-    "color": "#ffffff",
-    "selectedColor": "#09BB07",
-    "backgroundColor": "#eeeeee",
+    "color": "#adadad",
+    "selectedColor": "#ff575f",
+    "backgroundColor": "#ffffff",
     "borderStyle": "black",
     "position": "bottom",
     "list": [{
       "pagePath": "pages/index/index",
+      "iconPath": "static/images/toolbar/home.png",
+      "selectedIconPath": "static/images/toolbar/home_red.png",
       "text": "首页"
     }, {
       "pagePath": "pages/logs/logs",
+      "iconPath": "static/images/toolbar/scan.png",
+      "selectedIconPath": "static/images/toolbar/scan_red.png",
       "text": "日志"
     }]
   },

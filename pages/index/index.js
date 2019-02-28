@@ -25,6 +25,14 @@ Page({
       url: '/pages/detail/detail'
     })
   },
+  bindUpload() {
+    wx.chooseMessageFile({
+      count: 1,
+      success: (res) => {
+        console.log(res)
+      }
+    })
+  },
   onLoad() {
 /*    user.getUserInfo().then((d) => {
       console.log(d)
